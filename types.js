@@ -20,17 +20,17 @@ module.exports.types = {
 		patch
 	*/
 	// Documentation
-	"Docs": {release: "minor", title: "📄 Documentation"},
+	"Docs": {release: "patch", title: "📄 Documentation"},
 	"Readme": "Docs",
 	// Bug fixes
-	"Fix": {release: "minor", title: "🐛 Fix"},
+	"Fix": {release: "patch", title: "🐛 Fix"},
 	// Internal
-	"Internal": {release: "minor", title: "🧹 Internal"},
+	"Internal": {release: "patch", title: "🧹 Internal"},
 	"Refactor": "Internal",
 	"Cleaup": "Internal",
 	"Performance": "Internal",
 	// Packages & Dependencies
-	"Package": {release: "minor", title: "📦 Package"},
+	"Package": {release: "patch", title: "📦 Package"},
 	"Upgrade": "Package",
 	/*
 		No release
