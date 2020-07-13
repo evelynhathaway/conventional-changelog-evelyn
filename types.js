@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 module.exports.types = {
 	/*
@@ -48,7 +48,7 @@ module.exports.types = {
 	"Release": {release: false, title: "Other"},
 	"Other": {release: false, title: "Other"},
 };
-// TODO
+// TODO [>=1.3.0]
 module.exports.notes = {
 	"no-release": {release: false},
 	"release": {release: true},

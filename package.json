@@ -20,13 +20,18 @@
   "engines": {
     "node": ">=10.0.0"
   },
+  "scripts": {
+    "lint": "eslint ./"
+  },
   "files": [
     "templates/*",
     "*.js",
+    "!.eslintrc.js",
     "!release.config.js",
     "!commitlint.config.js"
   ],
   "dependencies": {
+    "compare-func": "^2.0.0",
     "q": "^1.5.1"
   },
   "devDependencies": {
@@ -36,6 +41,11 @@
     "@semantic-release/npm": "^7.0.5",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "commitlint": "^9.1.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-evelyn": "^3.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-unicorn": "^20.1.0",
     "husky": "^4.2.5",
     "semantic-release": "^17.1.1"
   },

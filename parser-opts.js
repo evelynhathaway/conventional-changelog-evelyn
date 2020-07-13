@@ -1,14 +1,14 @@
-"use strict"
+"use strict";
 
 module.exports = {
 	headerPattern: /^(\w*)(?:\((.*)\))?: (.*)$/,
 	headerCorrespondence: [
-	"type",
-	"scope",
-	"subject",
+		"type",
+		"scope",
+		"subject",
 	],
-	revertPattern: /^Revert:\s([\s\S]*?)\s*This reverts commit (\w*)\./,
+	revertPattern: /^Revert:\s([\S\s]*?)\s*This reverts commit (\w*)\./,
 	revertCorrespondence: ["header", "hash"],
-}
+};
 
-// TODO notes
+// TODO [>=1.3.0] notes
