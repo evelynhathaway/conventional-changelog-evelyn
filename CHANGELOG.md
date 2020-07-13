@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.1.2
+
+**[`v1.1.1...v1.1.2`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.1.1...v1.1.2)** - **2020-07-13**
+
+
+### 📦 Package
+
+
+- Release only needed files [`743e0e5`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/743e0e5)
+
 ## v1.1.1
 
 **[`v1.1.0...v1.1.1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.1.0...v1.1.1)** - **2020-07-13**
