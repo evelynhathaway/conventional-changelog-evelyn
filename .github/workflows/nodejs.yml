@@ -64,6 +64,11 @@ jobs:
     - name: Install Dependencies
       run: npm ci
 
+    - name: Link Self
+      run: |
+        npm link
+        npm link conventional-changelog-evelyn
+
     - name: Release
       run: npx semantic-release
       env:
