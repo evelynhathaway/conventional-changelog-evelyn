@@ -1,9 +1,10 @@
 {
   "name": "conventional-changelog-evelyn",
   "version": "1.1.2",
-  "description": "conventional-changelog preset for my projects",
+  "description": "Conventional Changelog preset for my projects",
   "keywords": [
     "conventional-changelog",
+    "semantic-release-config",
     "preset"
   ],
   "bugs": {
@@ -22,17 +23,30 @@
   "files": [
     "templates/*",
     "*.js",
-    "!release.config.js"
+    "!release.config.js",
+    "!commitlint.config.js"
   ],
   "dependencies": {
     "q": "^1.5.1"
   },
   "devDependencies": {
-    "@semantic-release/commit-analyzer": "^8.0.1",
-    "@semantic-release/release-notes-generator": "^9.0.1",
-    "semantic-release": "^17.1.1",
     "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/npm": "^7.0.5"
+    "@semantic-release/npm": "^7.0.5",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "commitlint": "^9.1.0",
+    "husky": "^4.2.5",
+    "semantic-release": "^17.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "conventional-changelog-evelyn"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "npm link && npm link conventional-changelog-evelyn && commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
