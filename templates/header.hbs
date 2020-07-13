@@ -1,0 +1,23 @@
+## {{currentTag}}{{#if title}} "{{title}}"{{/if}}
+
+{{#if @root.linkCompare~}}
+	**[`{{previousTag}}...{{currentTag}}`](
+	{{~#if @root.repository~}}
+		{{~#if @root.host}}
+			{{~@root.host}}/
+		{{~/if}}
+		{{~#if @root.owner}}
+			{{~@root.owner}}/
+		{{~/if}}
+		{{~@root.repository}}
+	{{~else}}
+		{{~@root.repoUrl}}
+	{{~/if~}}
+	/compare/{{previousTag}}...{{currentTag}})**
+
+	{{~#if date}} - {{/if}}
+{{~/if}}
+
+{{~#if date~}}
+	**{{date}}**
+{{/if}}
