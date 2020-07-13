@@ -1,6 +1,6 @@
 {
   "name": "conventional-changelog-evelyn",
-  "version": "1.1.1",
+  "version": "1.1.0",
   "description": "conventional-changelog preset for my projects",
   "keywords": [
     "conventional-changelog",
@@ -19,6 +19,11 @@
   "engines": {
     "node": ">=10.0.0"
   },
+  "files": [
+    "templates/*",
+    "*.js",
+    "!release.config.js"
+  ],
   "dependencies": {
     "q": "^1.5.1"
   },
