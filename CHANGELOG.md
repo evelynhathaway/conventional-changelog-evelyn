@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.1.1
+
+**[`v1.1.0...v1.1.1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.1.0...v1.1.1)** - **2020-07-13**
+
+
+### 🐛 Fix
+
+
+- Use correct release bump type for patch [`ccba563`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/ccba563)
+
 ## v1.1.0
 
 **[`v1.0.0...v1.1.0`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.0.0...v1.1.0)** - **2020-07-13**
