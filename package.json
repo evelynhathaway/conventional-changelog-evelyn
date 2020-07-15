@@ -26,9 +26,7 @@
   "files": [
     "templates/*",
     "*.js",
-    "!.eslintrc.js",
-    "!release.config.js",
-    "!commitlint.config.js"
+    "!.eslintrc.js"
   ],
   "dependencies": {
     "compare-func": "^2.0.0",
