@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.2.0
+
+**[`v1.1.2...v1.2.0`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.1.2...v1.2.0)** - **2020-07-15**
+
+
+### ⚡ Improvement
+
+
+- Publish commitlint and release configs [`f4b85ee`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/f4b85ee)
+
+### 🔧 Configuration
+
+
+- add eslint, fix lints [`af3828e`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/af3828e)
+
+### Other
+
+
+- Add commitizen adapter [`65c789b`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/65c789b)
+- Add permissive commitlint config [`5c6a489`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/5c6a489)
+
 ## v1.1.2
 
 **[`v1.1.1...v1.1.2`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.1.1...v1.1.2)** - **2020-07-13**
