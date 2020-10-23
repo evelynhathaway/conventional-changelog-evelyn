@@ -15,7 +15,7 @@ module.exports = {
 			"Fix",
 			"Internal",
 			"Refactor",
-			"Cleaup",
+			"Cleanup",
 			"Performance",
 			"Package",
 			"Upgrade",

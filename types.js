@@ -27,7 +27,7 @@ module.exports.types = {
 	// Internal
 	"Internal": {release: "patch", title: "🧹 Internal"},
 	"Refactor": "Internal",
-	"Cleaup": "Internal",
+	"Cleanup": "Internal",
 	"Performance": "Internal",
 	// Packages & Dependencies
 	"Package": {release: "patch", title: "📦 Package"},
@@ -47,10 +47,4 @@ module.exports.types = {
 	"Chore": {release: false, title: "Other"},
 	"Release": {release: false, title: "Other"},
 	"Other": {release: false, title: "Other"},
-};
-// TODO [>=1.3.0]
-module.exports.notes = {
-	"no-release": {release: false},
-	"release": {release: true},
-	"discard": {discard: true},
 };

@@ -71,7 +71,7 @@ function getWriterOpts () {
 				}
 			}
 
-			// remove references that already appear in the subject
+			// Remove references that already appear in the subject
 			commit.references = commit.references.filter(reference => {
 				if (!issues.includes(reference.issue)) {
 					return true;
