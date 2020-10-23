@@ -7,5 +7,4 @@ module.exports = {
 		"scope",
 		"subject",
 	],
-	mergePattern: /^Merge /,
 };

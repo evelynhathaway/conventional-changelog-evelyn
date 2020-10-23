@@ -31,6 +31,8 @@ function getWriterOpts () {
 			// Resolve aliases
 			if (typeof types[commit.type] === "string") commit.type = types[commit.type];
 
+			// Discard merge commits
+			if (/Merge /.test(commit.message)) return;
 			// Skip writing discarded types
 			if (types[commit.type] && types[commit.type].discard) return;
 
