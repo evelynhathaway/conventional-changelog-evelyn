@@ -7,8 +7,5 @@ module.exports = {
 		"scope",
 		"subject",
 	],
-	revertPattern: /^Revert:\s([\S\s]*?)\s*This reverts commit (\w*)\./,
-	revertCorrespondence: ["header", "hash"],
+	mergePattern: /^Merge /,
 };
-
-// TODO [>=1.3.0] notes
