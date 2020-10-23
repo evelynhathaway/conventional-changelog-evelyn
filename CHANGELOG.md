@@ -1,5 +1,30 @@
 # Changelog
 
+## v1.2.1
+
+**[`v1.2.0...v1.2.1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.2.0...v1.2.1)** - **2020-10-23**
+
+### 🐛 Fix
+
+- Cleanup type typo [`fe6faf4`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/fe6faf4)
+- Move merge commit logic to writer due to error in parser [`a6b6944`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/a6b6944)
+- Remove extra newlines in changelog [`3f2d70f`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/3f2d70f)
+
+### 📦 Package
+
+- npm update, npm audit fix [`380cc46`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/380cc46)
+
+### 🔧 Configuration
+
+- Lint on CI [`a7f77b5`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/a7f77b5)
+
+### Other
+
+- **deps:** Bump node-fetch from 2.6.0 to 2.6.1 [`2be2659`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/2be2659)
+- Drop unicorn lint version [`b2c5e90`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/b2c5e90)
+- Remove newlines from changelog for the project [`28378e2`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/28378e2)
+- Remove unused / unwanted code [`9d01363`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/9d01363)
+
 ## v1.2.0
 
 **[`v1.1.2...v1.2.0`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.1.2...v1.2.0)** - **2020-07-15**
