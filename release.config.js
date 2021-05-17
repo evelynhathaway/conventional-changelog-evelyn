@@ -1,4 +1,25 @@
 module.exports = {
+	"branches": [
+		{
+			name: "main",
+			channel: false,
+		},
+		{
+			name: "master",
+			channel: false,
+		},
+		{
+			name: "beta",
+			channel: "beta",
+			prerelease: "beta",
+		},
+		{
+			name: "alpha",
+			channel: "alpha",
+			prerelease: "alpha",
+		},
+		'+([0-9])?(.{+([0-9]),x}).x',
+	],
 	"plugins": [
 		[
 			"@semantic-release/commit-analyzer",
