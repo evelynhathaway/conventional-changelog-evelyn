@@ -3,4 +3,4 @@
 
 npm link
 npm link conventional-changelog-evelyn
-npx --no-install commitlint -- -E HUSKY_GIT_PARAMS
+npx --no-install commitlint --edit "$1"
