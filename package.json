@@ -1,7 +1,7 @@
 {
   "name": "conventional-changelog-evelyn",
   "version": "1.2.2",
-  "description": "Conventional Changelog preset for my projects",
+  "description": "Conventional Changelog and Semantic Release presets for my projects",
   "keywords": [
     "conventional-changelog",
     "semantic-release-config",
