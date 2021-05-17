@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.2.2
+
+**[`v1.2.1...v1.2.2`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.2.1...v1.2.2)** - **2021-05-17**
+
+### 📦 Package
+
+- npm update, GitHub Actions, dependabot [`ed0a2a6`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/ed0a2a6)
+
+### Other
+
+- Fix lint [`c8440a7`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/c8440a7)
+- **deps:** Bump handlebars from 4.7.6 to 4.7.7 [`af5d924`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/af5d924)
+- **deps:** Bump hosted-git-info from 2.8.8 to 2.8.9 [`26f931a`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/26f931a)
+- **deps:** Bump ini from 1.3.5 to 1.3.8 [`37706d5`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/37706d5)
+- **deps:** Bump y18n from 4.0.0 to 4.0.1 [`28d5930`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/28d5930)
+- **deps-dev:** Bump semantic-release from 17.2.1 to 17.2.3 [`9c8c56c`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/9c8c56c)
+
 ## v1.2.1
 
 **[`v1.2.0...v1.2.1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.2.0...v1.2.1)** - **2020-10-23**
