@@ -18,7 +18,7 @@ module.exports = {
 			channel: "alpha",
 			prerelease: "alpha",
 		},
-		'+([0-9])?(.{+([0-9]),x}).x',
+		"+([0-9])?(.{+([0-9]),x}).x",
 	],
 	"plugins": [
 		[
