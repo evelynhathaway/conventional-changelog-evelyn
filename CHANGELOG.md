@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.2.3
+
+**[`v1.2.2...v1.2.3`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.2.2...v1.2.3)** - **2021-05-17**
+
+### 📄 Documentation
+
+- **readme:** Add basic readme [`0e4acbb`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/0e4acbb)
+
+### Other
+
+- Add VS Code settings and fix commit lint hook [`86e730f`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/86e730f)
+- dependabot config update [`90615cd`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/90615cd)
+
 ## v1.2.2
 
 **[`v1.2.1...v1.2.2`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.2.1...v1.2.2)** - **2021-05-17**
