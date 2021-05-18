@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.3.0
+
+**[`v1.2.3...v1.3.0`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.2.3...v1.3.0)** - **2021-05-18**
+
+### ⚡ Improvement
+
+- Add and modify rules and their patterns [`11d0d48`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/11d0d48)
+
+### 🧹 Internal
+
+- Update old changelog generation typos [`e10f34f`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/e10f34f)
+
 ## v1.3.0-beta.1
 
 **[`v1.2.3...v1.3.0-beta.1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.2.3...v1.3.0-beta.1)** - **2021-05-18**
