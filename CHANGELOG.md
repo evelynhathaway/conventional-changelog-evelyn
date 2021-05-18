@@ -106,7 +106,9 @@
 
 ### 🔧 Configuration
 
-- Add secrets [`cc73ae1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/cc73ae1)- npm link self [`977b43f`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/977b43f)- Prepare for possible release [`671f651`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/671f651)
+- Add secrets [`cc73ae1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/cc73ae1)
+- npm link self [`977b43f`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/977b43f)
+- Prepare for possible release [`671f651`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/671f651)
 
 ### Other
 
