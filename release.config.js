@@ -51,7 +51,7 @@ module.exports = {
 					"CHANGELOG.md",
 				],
 				// eslint-disable-next-line no-template-curly-in-string
-				"message": "Chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+				"message": "Release: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
 			},
 		],
 	],

@@ -24,12 +24,17 @@ module.exports = Q.all([
 		return writerOpts;
 	});
 
-const titlesInOrder = Object.values(types).map((type) => typeof type === "string" ? "" : type.title);
+const titlesInOrder = Object.values(types).map((type) => {
+	if (typeof type === "string") return "";
+	if (Array.isArray(type)) return type[0].title;
+	return type.title;
+});
 function getWriterOpts () {
 	return {
 		transform: (commit, context) => {
 			// Resolve aliases
 			if (typeof types[commit.type] === "string") commit.type = types[commit.type];
+			if (Array.isArray(types[commit.type])) [commit.type] = types[commit.type];
 
 			// Discard merge commits
 			if (/Merge /.test(commit.message)) return;

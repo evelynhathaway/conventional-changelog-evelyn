@@ -2,39 +2,52 @@
 
 module.exports.types = {
 	/*
-		MAJOR
+		Primary: MAJOR
 	*/
 	// Breaking changes
 	"Breaking": {release: "major", title: "💥 Breaking"},
 	"Major": "Breaking",
 	/*
-		Minor
+		Primary: Minor
 	*/
 	// Features
 	"Feature": {release: "minor", title: "✨ Feature"},
+	"Feat": "Feature",
 	"New": "Feature",
 	// Improvements
 	"Improvement": {release: "minor", title: "⚡ Improvement"},
+	"Improve": "Improvement",
 	"Update": "Improvement",
 	/*
-		patch
+		Primary: patch
 	*/
 	// Documentation
-	"Docs": {release: "patch", title: "📄 Documentation"},
-	"Readme": "Docs",
+	"Documentation": {release: "patch", title: "📄 Documentation"},
+	"Docs": "Documentation",
+	"Readme": "Documentation",
 	// Bug fixes
 	"Fix": {release: "patch", title: "🐛 Fix"},
-	// Internal
-	"Internal": {release: "patch", title: "🧹 Internal"},
-	"Refactor": "Internal",
-	"Cleanup": "Internal",
-	"Performance": "Internal",
-	// Packages & Dependencies
-	"Package": {release: "patch", title: "📦 Package"},
-	"Upgrade": "Package",
+	// Accessability
+	"Accessibility": {release: "patch", title: "♿ Accessibility"},
+	"Access": "Accessibility",
+	"A11y": "Accessibility",
+	// Performance
+	"Performance": {release: "patch", title: "🔥 Performance"},
+	"Perf": "Performance",
 	/*
-		No release
+		Primary: No release
 	*/
+	// Packages & Dependencies
+	"Package": [
+		{release: false, title: "📦 Package"},
+		{scope: "user", release: "patch", title: "📦 Package"},
+		{scope: "*-user", release: "patch", title: "📦 Package"},
+		{scope: "prod", release: "patch", title: "📦 Package"},
+		{scope: "*-prod", release: "patch", title: "📦 Package"},
+		{scope: "dev", release: false, title: "📦 Package"},
+		{scope: "*-dev", release: false, title: "📦 Package"},
+	],
+	"Upgrade": "Package",
 	// Building & Configuration
 	"Config": {release: false, title: "🔧 Configuration"},
 	"CI": "Config",
@@ -42,9 +55,14 @@ module.exports.types = {
 	"Lint": "Config",
 	// Tests
 	"Test": {release: false, title: "✅ Tests"},
+	"Tests": "Test",
+	// Internal
+	"Internal": {release: false, title: "🧹 Internal"},
+	"Refactor": "Internal",
+	"Cleanup": "Internal",
+	"Chore": "Internal",
 	// Other
-	"WIP": {release: false, title: "🚧 Work-In-Progress"},
-	"Chore": {release: false, title: "Other"},
-	"Release": {release: false, title: "Other"},
-	"Other": {release: false, title: "Other"},
+	"WIP": {release: false, discard: true, title: "🚧 Work-In-Progress"},
+	"Release": {release: false, discard: true, title: "Other"},
+	"Other": {release: false, discard: true, title: "Other"},
 };
