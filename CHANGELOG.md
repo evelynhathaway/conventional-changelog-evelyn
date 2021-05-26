@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.3.1
+
+**[`v1.3.0...v1.3.1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.3.0...v1.3.1)** - **2021-05-26**
+
+### 🐛 Fix
+
+- Resolve titles for types in arrays [`8f2dd34`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/8f2dd34)
+
+### 📦 Package
+
+- **dev:** Bump eslint from 7.26.0 to 7.27.0 [`0d41b80`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/0d41b80)
+- **dev:** Bump eslint-plugin-import from 2.23.2 to 2.23.3 [`ff70aff`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/ff70aff)
+- **dev:** Bump eslint-plugin-regexp from 0.10.0 to 0.11.0 [`7c86676`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/7c86676)
+- **dev:** Update linting, stop recommending commitlint/prompt [`cef472b`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/cef472b)
+
+### 🧹 Internal
+
+- Change dependabot config [`827d46c`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/827d46c)
+
 ## v1.3.0
 
 **[`v1.2.3...v1.3.0`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.2.3...v1.3.0)** - **2021-05-18**
