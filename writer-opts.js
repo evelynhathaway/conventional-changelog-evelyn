@@ -32,17 +32,20 @@ const titlesInOrder = Object.values(types).map((type) => {
 function getWriterOpts () {
 	return {
 		transform: (commit, context) => {
+			let resolvedType = commit.type;
 			// Resolve aliases
-			if (typeof types[commit.type] === "string") commit.type = types[commit.type];
-			if (Array.isArray(types[commit.type])) [commit.type] = types[commit.type];
+			while (typeof resolvedType === "string") {
+				resolvedType = types[resolvedType];
+			}
+			if (Array.isArray(resolvedType)) [resolvedType] = resolvedType;
 
 			// Discard merge commits
-			if (/Merge /.test(commit.message)) return;
+			if (commit.message.startsWith("Merge ")) return;
 			// Skip writing discarded types
-			if (types[commit.type] && types[commit.type].discard) return;
+			if (resolvedType && resolvedType.discard) return;
 
-			// Mutate type, make it the title for writing, default to other
-			commit.type = types[commit.type] && types[commit.type].title || "Other";
+			// Add title for writing, default to other
+			commit.title = resolvedType ? resolvedType.title : "Other";
 
 			const issues = [];
 
@@ -89,7 +92,7 @@ function getWriterOpts () {
 
 			return commit;
 		},
-		groupBy: "type",
+		groupBy: "title",
 		commitGroupsSort: ({title: titleA}, {title: titleB}) => {
 			if (titlesInOrder.indexOf(titleA) > titlesInOrder.indexOf(titleB)) {
 				return 1;
