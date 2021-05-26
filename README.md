@@ -33,7 +33,7 @@ Based off of the ESLint commit convention, I threw in extra types so you can loa
 
 ```bash
 # Install all of the things
-npm install --save-dev @commitlint/prompt @semantic-release/changelog @semantic-release/git commitlint husky semantic-release conventional-changelog-evelyn
+npm install --save-dev @semantic-release/changelog @semantic-release/git commitlint husky semantic-release conventional-changelog-evelyn
 ```
 
 ## Usage
@@ -48,17 +48,12 @@ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
 
 ### Package
 
-To set up commitlint, commitizen, and semantic-release, add the following to your `package.json` file.
+To set up commitlint and semantic-release, add the following to your `package.json` file.
 
 ```json
 {
   "commitlint": {
     "extends": "./node_modules/conventional-changelog-evelyn/commitlint.config.js"
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/prompt"
-    }
   },
   "release": {
     "extends": "conventional-changelog-evelyn/release.config.js"
