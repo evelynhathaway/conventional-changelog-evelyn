@@ -8,8 +8,9 @@ const makeRule = (type, {scope, release}) => ({
 
 export default Object.keys(types).flatMap(type => {
 	let ruleMeta = types[type];
+	// Resolve aliases
 	while (typeof ruleMeta === "string") {
-		ruleMeta = types[type];
+		ruleMeta = types[ruleMeta];
 	}
 
 	if (Array.isArray(ruleMeta)) {
