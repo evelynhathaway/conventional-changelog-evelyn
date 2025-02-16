@@ -1,5 +1,8 @@
-module.exports = {
-	"branches": [
+/**
+ * @type {import("semantic-release").GlobalConfig}
+ */
+export default {
+	branches: [
 		{
 			name: "main",
 			channel: false,
@@ -20,7 +23,7 @@ module.exports = {
 		},
 		"+([0-9])?(.{+([0-9]),x}).x",
 	],
-	"plugins": [
+	plugins: [
 		[
 			"@semantic-release/commit-analyzer",
 			{

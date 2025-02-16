@@ -1,12 +1,9 @@
-"use strict";
+import {parser} from "./parser.js";
+import {writer} from "./writer.js";
 
-const Q = require("q");
-const conventionalChangelog = require("./conventional-changelog");
-const parserOpts = require("./parser-opts");
-const writerOpts = require("./writer-opts");
-
-
-module.exports = Q.all([conventionalChangelog, parserOpts, writerOpts])
-	.spread((conventionalChangelog, parserOpts, writerOpts) => {
-		return {conventionalChangelog, parserOpts, writerOpts};
-	});
+export default function createPreset () {
+	return {
+		parser,
+		writer,
+	};
+}

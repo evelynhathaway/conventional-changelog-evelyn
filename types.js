@@ -1,6 +1,4 @@
-"use strict";
-
-module.exports.types = {
+export const types = {
 	/*
 		Primary: MAJOR
 	*/
