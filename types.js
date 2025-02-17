@@ -1,3 +1,22 @@
+// Resolve information for the given commit type, resolving aliases
+export const resolveTypeMeta = (type) => {
+	let resolvedTypeMeta = type;
+	while (typeof resolvedTypeMeta === "string") {
+		resolvedTypeMeta = types[resolvedTypeMeta];
+	}
+	return resolvedTypeMeta;
+};
+
+// Resolve information for the given commit type, resolving aliases, returns the first release rule in the type
+// - Used to get the title and discard flag for a commit
+export const resolvePrimaryTypeMeta = (type) => {
+	const resolvedTypeMeta = resolveTypeMeta(type);
+	if (Array.isArray(resolvedTypeMeta)) {
+		return resolvedTypeMeta[0];
+	}
+	return resolvedTypeMeta;
+};
+
 export const types = {
 	/*
 		Primary: MAJOR

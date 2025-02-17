@@ -1,18 +1,15 @@
-import {types} from "./types.js";
+import {types, resolveTypeMeta} from "./types.js";
 
 const makeRule = (type, {scope, release}) => ({
 	type,
 	release,
-	scope,
+	// Add scope if defined
+	// - Avoid adding the key when undefined to prevent commit-analyzer from thinking a scope is required
+	...(scope ? {scope} : undefined),
 });
 
 export default Object.keys(types).flatMap(type => {
-	let ruleMeta = types[type];
-	// Resolve aliases
-	while (typeof ruleMeta === "string") {
-		ruleMeta = types[ruleMeta];
-	}
-
+	const ruleMeta = resolveTypeMeta(type);
 	if (Array.isArray(ruleMeta)) {
 		return ruleMeta.map(typeVariant => makeRule(type, typeVariant));
 	} else {

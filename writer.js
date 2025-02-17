@@ -1,7 +1,7 @@
 import {readFile} from "node:fs/promises";
 import {resolve} from "node:path";
 import compareFunc from "compare-func";
-import {types} from "./types.js";
+import {types, resolvePrimaryTypeMeta} from "./types.js";
 
 const [template, header, commit] = await Promise.all([
 	readFile(resolve(import.meta.dirname, "./templates/template.hbs"), "utf8"),
@@ -17,65 +17,53 @@ const titlesInOrder = Object.values(types).map((type) => {
 
 export const writer = {
 	transform: (commit, context) => {
-		let resolvedType = commit.type;
-		// Resolve aliases
-		while (typeof resolvedType === "string") {
-			resolvedType = types[resolvedType];
-		}
-		if (Array.isArray(resolvedType)) [resolvedType] = resolvedType;
+		const {message, type, scope, subject, references, hash} = commit;
 
 		// Discard merge commits
-		if (commit.message.startsWith("Merge ")) return;
-		// Skip writing discarded types
-		if (resolvedType && resolvedType.discard) return;
+		if (message.startsWith("Merge ")) return;
 
-		// Add title for writing, default to other
-		commit.title = resolvedType ? resolvedType.title : "Other";
+		// Resolve information for the given commit type, resolving aliases
+		const resolvedType = resolvePrimaryTypeMeta(type);
 
-		const issues = [];
+		// Discard writing types with `discard` flag
+		if (resolvedType?.discard) return;
 
-		if (commit.scope === "*") {
-			commit.scope = "";
-		}
-
-		if (typeof commit.hash === "string") {
-			commit.hash = commit.hash.slice(0, 7);
-		}
-
-		if (typeof commit.subject === "string") {
-			let url = context.repository
-				? `${context.host}/${context.owner}/${context.repository}`
-				: context.repoUrl;
-			if (url) {
-				url = `${url}/issues/`;
-				// Issue URLs
-				commit.subject = commit.subject.replaceAll(/#(?<issue>\d+)/g, (match, issue) => {
-					issues.push(issue);
-					return `[#${issue}](${url}${issue})`;
-				});
-			}
-			if (context.host) {
-				// User URLs
-				commit.subject = commit.subject.replaceAll(/\B@(?<username>[\da-z](?:-?[\d/a-z]){0,38})/g, (match, username) => {
+		// Link references in the subject in markdown
+		const repositoryUrl = context.repository
+			? `${context.host}/${context.owner}/${context.repository}`
+			: context.repoUrl;
+		const referencesInSubject = [];
+		const subjectWithLinkedReferences = (
+			(subject ?? "")
+				// Link issues
+				.replaceAll(/#(?<issue>\d+)/g, (match, issue) => {
+					referencesInSubject.push(issue);
+					if (repositoryUrl) {
+						return `[#${issue}](${repositoryUrl}/issues${issue})`;
+					}
+				})
+				// Link users
+				.replaceAll(/\B@(?<username>[\da-z](?:-?[\d/a-z]){0,38})/g, (match, username) => {
 					if (username.includes("/")) {
 						return `@${username}`;
 					}
-
 					return `[@${username}](${context.host}/${username})`;
-				});
-			}
-		}
+				})
+		);
 
-		// Remove references that already appear in the subject
-		commit.references = commit.references.filter(reference => {
-			if (!issues.includes(reference.issue)) {
-				return true;
-			}
-
-			return false;
-		});
-
-		return commit;
+		return {
+			type,
+			// If the scope is *, remove it as it's the entire project
+			scope: scope === "*" ? "" : scope,
+			// Add subject with linked references in markdown
+			subject: subjectWithLinkedReferences,
+			// Add title for writing, default to other
+			title: resolvedType?.title ?? "Other",
+			// Remove references that already appear in the subject
+			references: references.filter(reference => !referencesInSubject.includes(reference.issue)),
+			// Shorten hash
+			hash: hash?.slice(0, 7),
+		};
 	},
 	groupBy: "title",
 	commitGroupsSort: ({title: titleA}, {title: titleB}) => (
