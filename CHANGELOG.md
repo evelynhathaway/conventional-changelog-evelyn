@@ -1,5 +1,42 @@
 # Changelog
 
+## v2.0.0
+
+**[`v1.3.1...v2.0.0`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.3.1...v2.0.0)** - **2025-02-17**
+
+### 💥 Breaking
+
+- Use new conventional changelog and commit-analyzer config format, require semantic-release >=24 and Node.js >=20.11, require kebab-case scope if present [`17be3e4`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/17be3e4)
+
+### 🐛 Fix
+
+- Infinite loop in release rule alias resolution [`3392f23`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/3392f23)
+- Prevent commit-analyzer from thinking scopes are required, prevent mutation of the writer commit argument [`7bcba70`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/7bcba70)
+
+### 📦 Package
+
+- **dev:** Bump @semantic-release/git from 9.0.0 to 9.0.1 [`5adee5f`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/5adee5f)
+- **dev:** Bump @semantic-release/release-notes-generator [`e58361a`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/e58361a)
+- **dev:** Bump commitlint from 12.1.4 to 13.1.0 [`862d3b7`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/862d3b7)
+- **dev:** Bump eslint from 7.27.0 to 7.28.0 [`7e1dfbc`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/7e1dfbc)
+- **dev:** Bump eslint from 7.28.0 to 7.31.0 [`a1d08f4`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/a1d08f4)
+- **dev:** Bump eslint from 7.31.0 to 7.32.0 [`5e8d9ca`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/5e8d9ca)
+- **dev:** Bump eslint-plugin-evelyn from 6.2.0 to 6.2.1 [`767b47f`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/767b47f)
+- **dev:** Bump eslint-plugin-import from 2.23.3 to 2.23.4 [`1b0ff46`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/1b0ff46)
+- **dev:** Bump eslint-plugin-import from 2.23.4 to 2.24.0 [`43a6d91`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/43a6d91)
+- **dev:** Bump eslint-plugin-import from 2.24.0 to 2.24.1 [`9e81e22`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/9e81e22)
+- **dev:** Bump eslint-plugin-import from 2.24.1 to 2.24.2 [`0abffb6`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/0abffb6)
+- **dev:** Bump eslint-plugin-regexp from 0.10.0 to 0.11.0 [`a78cc8b`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/a78cc8b)
+- **dev:** Bump eslint-plugin-regexp from 0.11.0 to 0.13.2 [`ca0b6c3`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/ca0b6c3)
+- **dev:** Bump lint-staged from 11.0.0 to 11.1.0 [`6cdc51d`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/6cdc51d)
+- **dev:** Bump lint-staged from 11.1.0 to 11.1.1 [`a270501`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/a270501)
+- **dev:** Bump lint-staged from 11.1.1 to 11.1.2 [`79f2182`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/79f2182)
+- **dev:** Bump semantic-release from 17.4.3 to 17.4.4 [`21f3edf`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/21f3edf)
+- **dev:** Bump semantic-release from 17.4.4 to 17.4.5 [`4a6839e`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/4a6839e)
+- **dev:** Bump semantic-release from 17.4.5 to 17.4.6 [`8f8447a`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/8f8447a)
+- **dev:** Bump semantic-release from 17.4.6 to 17.4.7 [`283270e`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/283270e)
+- **dev:** Bump sort-package-json from 1.50.0 to 1.51.0 [`80fdaf2`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/80fdaf2)
+
 ## v1.3.1
 
 **[`v1.3.0...v1.3.1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.3.0...v1.3.1)** - **2021-05-26**
