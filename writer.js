@@ -39,7 +39,7 @@ export const writer = {
 				.replaceAll(/#(?<issue>\d+)/g, (match, issue) => {
 					referencesInSubject.push(issue);
 					if (repositoryUrl) {
-						return `[#${issue}](${repositoryUrl}/issues${issue})`;
+						return `[#${issue}](${repositoryUrl}/issues/${issue})`;
 					}
 				})
 				// Link users
