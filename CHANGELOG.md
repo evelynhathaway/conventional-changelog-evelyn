@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.0.1
+
+**[`v2.0.0...v2.0.1`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v2.0.0...v2.0.1)** - **2025-02-18**
+
+### 🐛 Fix
+
+- Missing slash in referenced issue links [`879774a`](https://github.com/evelynhathaway/conventional-changelog-evelyn/commit/879774a)
+
 ## v2.0.0
 
 **[`v1.3.1...v2.0.0`](https://github.com/evelynhathaway/conventional-changelog-evelyn/compare/v1.3.1...v2.0.0)** - **2025-02-17**
